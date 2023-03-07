@@ -74,7 +74,8 @@
                 name="senha"
                 id="senha"
                 class="input"
-                minlength="6"
+                pattern="^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$"
+                title="A senha deve conter pelo menos uma letra, pelo menos um número e ter mais de seis caracteres. "
                 type="password"
                 placeholder="Senha"
                 required
