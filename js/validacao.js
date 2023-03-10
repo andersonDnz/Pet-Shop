@@ -1,8 +1,14 @@
-export function valida(input) {
+ function valida(input) {
   const tipoDeInput = input.dataset.tipo;
 
   if (validadores[tipoDeInput]) {
     validadores[tipoDeInput](input);
+  }
+
+  if (input.validity.valid) {
+    input.parentElement.classList.remove("input-container--invalido");
+  } else {
+    input.parentElement.classList.add("input-container--invalido");
   }
 }
 
@@ -33,3 +39,5 @@ function maiorQue18(data) {
 
   return dataMais18 <= dataAtual;
 }
+
+export default valida;
