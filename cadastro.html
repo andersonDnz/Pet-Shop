@@ -64,7 +64,7 @@
                 placeholder="Email"
                 required
               />
-              <label class="input-label"  for="email">Email</label>
+              <label class="input-label" for="email">Email</label>
               <span class="input-mensagem-erro"
                 >Este campo não está válido</span
               >
@@ -77,10 +77,11 @@
                 pattern="^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$"
                 title="A senha deve conter pelo menos uma letra, pelo menos um número e ter mais de seis caracteres. "
                 type="password"
+                autocomplete="username"
                 placeholder="Senha"
                 required
               />
-              <label class="input-label" for="senha">Senha</label>
+              <label class="input-label" 3for="senha">Senha</label>
               <span class="input-mensagem-erro"
                 >Este campo não está válido</span
               >
@@ -94,6 +95,7 @@
                 id="nascimento"
                 class="input"
                 type="date"
+                data-tipo="dataNascimento"
                 placeholder="Data de nascimento"
                 required
               />
@@ -182,6 +184,6 @@
         </form>
       </section>
     </main>
-    <script src="js/validacao.js"></script>
+    <script src="./js/app.js" type="module"></script>
   </body>
 </html>
