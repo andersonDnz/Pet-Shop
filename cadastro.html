@@ -41,13 +41,14 @@
         >
           <fieldset>
             <legend class="formulario__legenda">Informações básicas</legend>
-            <div class="input-container input-container--invalido">
+            <div class="input-container">
               <input
                 name="nome"
                 id="nome"
                 class="input"
                 type="text"
                 placeholder="Nome"
+                data-tipo="nome"
                 required
               />
               <label class="input-label" for="nome">Nome</label>
@@ -62,6 +63,7 @@
                 class="input"
                 type="email"
                 placeholder="Email"
+                data-tipo="email"
                 required
               />
               <label class="input-label" for="email">Email</label>
@@ -79,11 +81,12 @@
                 type="password"
                 autocomplete="username"
                 placeholder="Senha"
+                data-tipo="senha"
                 required
               />
               <label class="input-label" 3for="senha">Senha</label>
               <span class="input-mensagem-erro"
-                >Este campo não está válido</span
+                >Este campo não pode está válido</span
               >
             </div>
           </fieldset>
