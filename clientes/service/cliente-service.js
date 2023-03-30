@@ -31,9 +31,25 @@ const detalhaCliente = (id) => {
   });
 };
 
+const atualizacliente = (id, nome, email) => {
+  return fetch(`http://localhost:3000/profile/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify({
+      nome: nome,
+      email: email,
+    }),
+  }).then((resposta) => {
+    return resposta.json();
+  });
+};
+
 export const clienteService = {
   listaClientes,
   criaCliente,
   removeCliente,
   detalhaCliente,
+  atualizacliente,
 };
